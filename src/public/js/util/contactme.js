@@ -35,7 +35,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>恭喜！成功发送您的预定和反馈信息！由于货源有限，我们会抽取前几名幸运用户, 并允许预交押金和发货 </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -48,7 +48,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
+                    $('#success > .alert-danger').append($("<strong>").text("系统出现问题，请联系管理人员处理!"));
                    
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
