@@ -1,0 +1,1 @@
+docker run --name mongo -v /db:/data/db -p 28017:27017 -d mongo:latest

@@ -55,6 +55,7 @@
     "extract-text-webpack-plugin": "github:webpack-contrib/extract-text-webpack-plugin",
     "grunt": "^1.0.1",
     "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.2.0",

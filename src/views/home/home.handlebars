@@ -2,17 +2,516 @@
 {{#extend "css"}}
     <link rel="stylesheet" href="/css/example.css">
 {{/extend}}
-<h1>welcome to the home page</h1>
-<span>
-    <form action="/post/search" method="GET">
-    <input type="text" name="keyword" placeholder="SEARCH" class="search" />
-    <input type="submit" value="submit">
-    </form>
-</span>
-<!--<p>Your fortune of the day: </p>
-<blockquote>{{fortune}}</blockquote>-->
-<br>
 
-<h2>ALL THE POSTS</h2>
 
-    {{> post/postsLoop}}
+<div  id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">瘦猴子聚货</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">服务</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">爆品水果</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">提出您的需求</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">关于我们</a>
+                    </li>
+                    {{!--<li>
+                        <a class="page-scroll" href="#team">团队</a>
+                    </li>--}}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">预定即将开始!</div>
+                <div class="intro-heading">我们帮助中小水果店减低经营成本，提供一整套解决方案</div>
+                <a href="#portfolio" class="page-scroll btn btn-xl">查看预定</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">服务</h2>
+                    <h3 class="section-subheading text-muted">针对中小水果店铺的解决方案</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">进货</h4>
+                    <p class="text-muted">我们提供非常有竞争力的果品进货价格，提升中小水果店竞争力和盈利水平</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">降低运输及损耗成本</h4>
+                    <p class="text-muted">我们发货到店铺附近，途中损耗和运输等成本我们承担！</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">质量和服务</h4>
+                    <p class="text-muted">我们严格审核合作商家和农场，并免费提供5天存货退货服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">热门进货</h2>
+                    <h3 class="section-subheading text-muted">推荐进货爆品</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="build/img/portfolio/watermelon/watermelon.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>上海麒麟瓜</h4>
+                        <p class="text-muted">进货价 3RMB/公斤</p>
+                        <p><a href="#portfolioModal1" class="portfolio-link" data-toggle="modal"><i class="fa fa-plus text-primary"> 更多</i></a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="build/img/portfolio/more.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>更多水果</h4>
+                        <p class="text-muted">即将推出，欢迎提出您的<a href="#contact">需求</a></p>
+                        <p><a href="#portfolioModal2" class="portfolio-link" data-toggle="modal"><i class="fa fa-plus text-primary"> 更多</i></a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="build/img/portfolio/more.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>更多水果</h4>
+                        <p class="text-muted">即将推出，欢迎提出您的<a href="#contact">需求</a></p>
+                        <p><a href="#portfolioModal3" class="portfolio-link" data-toggle="modal"><i class="fa fa-plus text-primary"> 更多</i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">关于瘦猴子聚货</h2>
+                    <h3 class="section-subheading text-muted">瘦猴子历史</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>March 2017</h4>
+                                    <h4 class="subheading">成立</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">带着给中小水果店铺降低成本和竞争力的使命，我们成立了!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>May 2017</h4>
+                                    <h4 class="subheading">测试网站上线</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">网站Beta版建立,开始产品测试!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/fruit.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2017</h4>
+                                    <h4 class="subheading">单品类测试</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">西瓜产品上线!</p>
+                                </div>
+                            </div>
+                        </li>
+                        {{!--<li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>July 2014</h4>
+                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
+                            </div>
+                        </li>--}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    {{!--<section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="build/img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Kay Garland</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="build/img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Larry Parker</h4>
+                        <p class="text-muted">Lead Marketer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="build/img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Diana Pertersen</h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section>--}}
+
+    <!-- Clients Aside -->
+    {{!--<aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>--}}
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">提出您的需求和建议</h2>
+                    <h3 class="section-subheading text-muted">为了更好为您服务，欢迎提出您的切实进货需求和意见建议</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="您的店铺名 [可选]" id="name" required data-validation-required-message="请输入您的店铺名.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="您的店铺地址 *" id="address" required data-validation-required-message="请输入您的店铺地址.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                {{!--<div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>--}}
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="您的手机 *" id="phone" required data-validation-required-message="请输入您的手机号码.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="我要预定1000斤西瓜，品种为上海麒麟...[也可写上您的意见建议] *" id="message" required data-validation-required-message="请输入您的需求或建议."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; 瘦猴子 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="javascript:void(0)"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                        <img src="/img/social/mywechat.jpg" class="myWechat">
+                        </li>
+                        
+
+                        <li>
+                            <a href="tel: 13395810472"><i class="fa fa-phone-square"></i></a>
+                            <p class="hiddenText">联系电话： 13395810472</p>
+                            
+                        </li>
+                        {{!--<li><a href="#"><i class="fa fa-linkedin"></i></a>--}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>上海麒麟西瓜</h2>
+                                <p class="item-intro text-muted">来自上海崇明岛的麒麟西瓜.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/watermelon/shwatermelon.jpg" alt="">
+                                <p>麒麟西瓜皮薄肉脆，甜度高水分足，吃起来特别爽口，是一种非常受欢迎的优良西瓜品种，西瓜知识介绍： 西瓜为葫芦科植物西瓜的果实。我国南北皆有西瓜栽培。瓜呈圆形或椭圆形，皮色有浓绿、绿、白或绿色夹蛇纹等。瓤多汁而甜，呈浓红、淡 红、黄或白色。 西瓜堪称“瓜中之王”，因是在汉代从西域引入，故称“西瓜”。西瓜味道甘味多汁，清爽解渴，是盛夏佳果，西瓜除不含脂肪和胆固醇外， 含有大量葡萄糖、苹果酸、果糖、蛋白氨基酸、番茄素及丰富的维生素C等物质，是一种富有营养、纯净、食用安全的食品。</p>
+                                <p>
+                                <p>注意： 最近西瓜品种价格波动较大，可能每天的价格会有所波动，我们会及时更新...</p>
+                               <strong>麒麟西瓜批发说明：</p>
+                                <ul class="list-inline">
+                                    <li>价格更新时间: 2017年6月14日更新</li>
+                                    <li>购买要求: 不少于100公斤,并每个店铺最多限制订货不超过2000公斤</li>
+                                    <li>发货条件: 多家店铺团购购货达到2万公斤</li>
+                                    <li>全额付款：货到付款 </li>
+                                </ul>
+                                <a href="https://weidian.com/item.html?itemID=2116699545"><i class="fa fa-book"> 预定 </i></button></a>                                
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"> 关闭</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>更多水果..</h2>
+                                <p class="item-intro text-muted">尽情期待...</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/more.png" alt="">
+                                <p>请，我们希望得到各位的支持，建议和提出大家的需求，提交请于网页首页页面底部的表格提交哦</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> 关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>更多水果..</h2>
+                                <p class="item-intro text-muted">尽情期待...</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/more.png" alt="">
+                                <p>请，我们希望得到各位的支持，建议和提出大家的需求，提交请于网页首页页面底部的表格提交哦</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> 关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+</div>

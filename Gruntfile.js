@@ -9,7 +9,8 @@ module.exports = function (grunt) {
     'grunt-contrib-uglify',
     'grunt-contrib-cssmin',
     'grunt-hashres',
-    'grunt-contrib-watch'
+    'grunt-contrib-watch',
+    'grunt-contrib-imagemin'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task)
   })
@@ -21,6 +22,7 @@ module.exports = function (grunt) {
       js: 'src/public/js',
       scss: 'src/public/scss',
       css: 'src/public/css',
+      img: 'src/public/img',
       release: 'src/public/build/'
     },
 
@@ -44,7 +46,7 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          '<%= paths.release %>/js/app.min.js': ['<%= paths.js %>/**/*.js', '!<%= paths.js %>/*-test/*.js', '!<%= paths.js %>/common/*']
+          '<%= paths.release %>/js/app.min.js': ['<%= paths.js %>/**/*.js','!<%= paths.js %>/vendor/*']
         }
       }
     },
@@ -74,6 +76,20 @@ module.exports = function (grunt) {
       }
     },
 
+
+  imagemin: {                          // Task
+    dynamic: {                         // Another target
+      files: [{
+        expand: true,    
+        cwd: '<%= paths.img %>/',                // Enable dynamic expansion                // Src matches are relative to this path
+        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+        dest: '<%= paths.release %>/img/'               // Destination path prefix
+      }]
+    }
+  },
+
+
+
     watch: {
       options: {
         dateFormat: function (time) {
@@ -84,7 +100,7 @@ module.exports = function (grunt) {
 
       css: {
         files: ['<%= paths.scss %>/**/*.scss'],
-        tasks: ['sass', 'hashres']
+        tasks: ['sass', 'cssmin','hashres','uglify','imagemin']
       },
 
       js: {
@@ -97,6 +113,6 @@ module.exports = function (grunt) {
 
     // regiter task
     // grunt.registerTask('watch',['watch']);
-  grunt.registerTask('default', ['sass', 'cssmin', 'uglify:dist', 'hashres'])
-  grunt.registerTask('static', ['sass', 'cssmin', 'uglify:dist', 'hashres'])
+  grunt.registerTask('default', ['sass', 'cssmin', 'uglify:dist', 'hashres','imagemin'])
+  grunt.registerTask('static', ['sass', 'cssmin', 'uglify:dist', 'hashres','imagemin'])
 }

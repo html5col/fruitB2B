@@ -9,7 +9,7 @@ var childProcess = require('child_process')
 let hostname
 let dbUsername = process.env.dbUsername
 let dbPassword = process.env.dbPassword
-let mongoPort = process.env.MongoPort || 27017
+let mongoPort = process.env.MongoPort || 28017
 console.log(dbUsername, dbPassword, mongoPort)
 
 childProcess.exec('hostname -f', function (err, stdout, stderr) {
